@@ -60,7 +60,7 @@ export default function ContactForm() {
         />
       </Label>
       <Label id={nanoid()}>
-        Number
+        Phone
         <Input
           type="tel"
           name="phone"

@@ -7,7 +7,7 @@ import { useSelector } from 'react-redux';
 export const ContactList = ({ contacts }) => {
   const data = useSelector(state => state.filter.value);
   const normalizedFilter = data.toLowerCase();
-
+  
   const onFiltr = () => {
     return contacts.filter(contact =>
       contact.name.toLowerCase().includes(normalizedFilter)
@@ -16,8 +16,8 @@ export const ContactList = ({ contacts }) => {
 
   return (
     <List>
-      {onFiltr().map(({ name, phone, id }) => {
-        return <ContactItem key={nanoid()} name={name} phone={phone} id={id} />;
+      {onFiltr().map(({ name, phone, _id }) => {
+        return <ContactItem key={nanoid()} name={name} phone={phone} id={_id} />;
       })}
     </List>
   );
